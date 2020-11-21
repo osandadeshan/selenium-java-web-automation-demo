@@ -1,4 +1,5 @@
-/selenium-page-object-model-demo.iml
 /.idea
 /target
 /test-output
+/reports
+/selenium-page-object-model.iml
