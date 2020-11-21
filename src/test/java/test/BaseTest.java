@@ -14,7 +14,7 @@ public class BaseTest {
     public void before() {
         setDriver(DriverFactory.getNewDriverInstance(getProperty("browser")));
         getDriver().manage().window().maximize();
-        getDriver().get(getProperty("application-url"));
+        getDriver().get(getProperty("application_url"));
     }
 
     @AfterMethod
