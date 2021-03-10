@@ -30,16 +30,16 @@ public class ExtentReportListener implements ITestListener {
     private ExtentTest test;
     private static final String extentReportDirectory = System.getProperty("user.dir") + fileSeparator + "reports" +
             fileSeparator + "html-report";
-    private static final String timestamp = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
+    private static final String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date());
 
     @Override
     public void onStart(ITestContext iTestContext) {
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(extentReportDirectory + fileSeparator +
-                "Execution Results - " + timestamp + ".html");
+                "Execution_Results_" + timestamp + ".html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
 
-        if (getProperty("extent_reporter_theme").toLowerCase().equals("dark"))
+        if (getProperty("extent_reporter_theme").equalsIgnoreCase("dark"))
             htmlReporter.config().setTheme(Theme.DARK);
         else
             htmlReporter.config().setTheme(Theme.STANDARD);
