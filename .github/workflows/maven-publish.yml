@@ -20,6 +20,7 @@ jobs:
         cache: maven
      
     - uses: browser-actions/setup-chrome@latest
+    - name: Set up Chrome
     - run: chrome --version
      
     - name: Running Regression Test Suite
