@@ -7,9 +7,7 @@ on:
  
 jobs:
   build:
- 
     runs-on: ubuntu-latest
- 
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -18,10 +16,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-     
     - uses: browser-actions/setup-chrome@latest
     - name: Set up Chrome
     - run: chrome --version
-     
     - name: Running Regression Test Suite
     - run: mvn clean test -Pheadless-chrome,qa
