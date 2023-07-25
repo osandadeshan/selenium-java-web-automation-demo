@@ -64,3 +64,10 @@ jobs:
 
       - name: Running Regression Test Suite
         run: mvn clean test -Pheadless-chrome,qa
+
+      # Archive the "reports" folder
+      - name: Archive test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: /reports
