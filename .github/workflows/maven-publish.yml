@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Setup Java and other build tools
       - name: Set up JDK 11
@@ -28,7 +28,7 @@ jobs:
 
       # Cache Maven dependencies and other build-related files
       - name: Cache build dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ~/.m2/repository
@@ -43,7 +43,7 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Setup Java and other test-related tools
       - name: Set up JDK 11
@@ -55,7 +55,7 @@ jobs:
 
       # Restore cached build dependencies
       - name: Restore cached build dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ~/.m2/repository
