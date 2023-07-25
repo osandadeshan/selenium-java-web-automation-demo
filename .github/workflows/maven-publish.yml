@@ -22,11 +22,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Installing Gauge
-        run: curl -SsL https://downloads.gauge.org/stable | sh
-      - name: Installing Gauge-Java Language Runner
-        run: gauge install java
-      - name: Running Pre-Requisites
-        run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="qa"
+      - uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
       - name: Running Regression Test Suite
         run: mvn clean test -Pheadless-chrome,qa
