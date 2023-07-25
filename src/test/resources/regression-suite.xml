@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Web Automation Demo Regression Test Suite">
+    <test name="Regression Test">
+        <classes>
+            <class name="LoginTest" />
+            <class name="NavigationBarTest" />
+        </classes>
+    </test>
+</suite>

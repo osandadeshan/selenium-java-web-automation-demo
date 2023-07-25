@@ -4,30 +4,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage {
-
-    private final By emailTextBox = By.id("email");
-    private final By passwordTextBox = By.id("passwd");
-    private final By signInButton = By.id("SubmitLogin");
-
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    public void setEmail(String email) {
-        sendKeys(emailTextBox, email);
+    public void login(String username, String password) {
+        inputUsername(username);
+        inputPassword(password);
+        clickLoginButton();
     }
 
-    public void setPassword(String password) {
-        sendKeys(passwordTextBox, password);
+    private void inputUsername(String email) {
+        sendKeys(By.id("loginusername"), email);
     }
 
-    public void clickSignIn() {
-        click(signInButton);
+    private void inputPassword(String password) {
+        sendKeys(By.id("loginpassword"), password);
     }
 
-    public void login(String email, String password) {
-        setEmail(email);
-        setPassword(password);
-        clickSignIn();
+    private void clickLoginButton() {
+        click(By.xpath("//button[@onclick='logIn()']"));
     }
 }
