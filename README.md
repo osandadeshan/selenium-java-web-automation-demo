@@ -1,4 +1,4 @@
-# Web Application Automation Using Selenium (Cross Browsers)
+# Web Application Automation Using Selenium & TestNG (Cross Browsers)
 
 This project serves as a boilerplate for automating web applications across various browsers and environments using TestNG and the Selenium library.
 
