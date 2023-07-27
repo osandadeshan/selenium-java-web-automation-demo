@@ -2,6 +2,8 @@
 
 This project serves as a boilerplate for automating web applications across various browsers and environments using TestNG and the Selenium library.
 
+[![Selenium Java Web UI Automation CI](https://github.com/osandadeshan/selenium-java-web-automation-demo/actions/workflows/selenium-java-ci.yml/badge.svg?branch=master)](https://github.com/osandadeshan/selenium-java-web-automation-demo/actions/workflows/selenium-java-ci.yml)
+
 ## Prerequisites
 1. Java
 2. Maven
