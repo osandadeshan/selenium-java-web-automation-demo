@@ -1,15 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Web Automation Demo Regression Test Suite">
-    <test name="Regression Test">
+<suite name="Web Automation Demo Smoke Test Suite">
+    <test name="Smoke Test">
         <classes>
             <class name="LoginTest">
                 <methods>
-                    <include name="testInvalidLogin"/>
+                    <include name="testValidLogin"/>
                 </methods>
             </class>
             <class name="NavigationBarTest">
                 <methods>
-                    <include name="testNavigationBarOptionRoutines" />
+                    <include name="testNavigationBarOptionsVisibility" />
                 </methods>
             </class>
         </classes>

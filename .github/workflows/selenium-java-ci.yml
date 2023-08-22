@@ -59,7 +59,7 @@ jobs:
           google-chrome --version
 
       - name: Execute regression test suite
-        run: mvn clean test -Pheadless-chrome,qa
+        run: mvn clean test -Pheadless-chrome,qa,smoke-test
 
       - name: Archive test reports
         if: always()

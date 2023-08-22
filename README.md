@@ -19,12 +19,12 @@ This project serves as a boilerplate for automating web applications across vari
 
 
 2. Using Command Line
-    * To run tests in Firefox browser against the QA environment
+    * To run the smoke test suite in Firefox browser against the QA environment
 
-      `mvn clean test -Pfirefox,qa`
-    * To run tests in Safari browser against the UAT environment
+      `mvn clean test -Pfirefox,qa,smoke-test`
+    * To run the regression test suite in Safari browser against the UAT environment
 
-      `mvn clean test -Psafari,uat`
+      `mvn clean test -Psafari,uat,regression-test`
 
 **Note**: By default, if no Maven profiles are selected, the tests will be executed on the `chrome` browser and in the `dev` environment.
 
