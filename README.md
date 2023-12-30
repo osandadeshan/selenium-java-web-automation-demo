@@ -7,7 +7,7 @@ This project serves as a boilerplate for automating web applications across vari
 ## Prerequisites
 1. Java
 2. Maven
-3. NodeJS
+3. Chrome
 
 ## How to run tests
 1. Using IntelliJ IDEA
