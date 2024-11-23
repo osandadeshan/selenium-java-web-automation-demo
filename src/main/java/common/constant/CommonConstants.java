@@ -30,9 +30,9 @@ public class CommonConstants {
         if (browserNameFromPomXml != null)
             browserName = browserNameFromPomXml;
         else {
-            logger.warn("The Maven Profile is missing the platform configuration.");
+            logger.warn("The Maven Profile is missing the browser configuration.");
             browserName = CHROME;
-            logger.warn("The default platform '{}' will be enabled for this run.", browserName);
+            logger.warn("The default browser '{}' will be enabled for this run.", browserName);
         }
 
         return browserName.toLowerCase();
